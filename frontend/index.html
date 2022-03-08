@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>OpenBoard</title>
+</head>
+
+<body>
+    <div class="options-cont">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="tools-cont  scale-tool">
+        <img class="pencil" src="./icons/pencil.png" alt="">
+        <img class="eraser" src="./icons/eraser.png" alt="">
+        <img class="redo" src="./icons/redo.png" alt="">
+        <img class="undo" src="./icons/undo.png" alt="">
+        <img class="sticky-notes" src="./icons/sticky-notes.png" alt="">
+        <img class="download" src="./icons/download.png" alt="">
+        <img class="upload" src="./icons/upload.png" alt="">
+    </div>
+
+    <div class="pencil-tool">
+        <div class="pencil-width">
+            <input type="range" min="2" max="10" value="3" class="p-width">
+        </div>
+        <div class="pencil-color">
+            <div class=" black pencil-color"></div>
+            <div class=" red    pencil-color"></div>
+            <div class=" blue   pencil-color"></div>
+        </div>
+
+    </div>
+
+    <div class="eraser-tool">
+        <div>
+            <input type="range" min="2" max="10" value="4" class="e-width">
+        </div>
+
+    </div>
+
+    <!-- <div class="sticky-note">
+            <div class="sticky-header">
+                <div class="minimize"></div>
+                <div class="remove"></div>
+
+            </div>
+            <div class="sticky-text">
+                  <textarea class="area"></textarea>
+            </div>
+
+
+        </div> -->
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+        integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
+        crossorigin="anonymous"></script>
+        <script>
+            let socket=io.connect("http://localhost:6000");
+        </script>
+    <Script src="./tools.js"></Script>
+    <script src="./canvas.js"> </script>
+</body>
+
+</html>
